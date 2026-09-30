@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security · EventHub Docs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="security">
+  <div id="app-shell"></div>
+  <script src="docs.js"></script>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    const key = document.body.dataset.page;
+    const [title, subtitle] = PAGE_TITLES[key] || ['EventHub Docs', ''];
+    document.title = title.replace(/^[^ ]+ /, '') + ' · EventHub Docs';
+    mountShell(key, title, subtitle);
+  </script>
+  <script src="page.js"></script>
+</body>
+</html>
